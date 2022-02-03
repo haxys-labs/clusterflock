@@ -1,0 +1,5 @@
+# Required files for `ClusterFlock`
+clusterflock.js
+lib/meta.js
+ice/nuke.js
+util/rm.js
