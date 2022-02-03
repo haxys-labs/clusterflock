@@ -1,10 +1,4 @@
-const SPLASH = "\
-  ___ _         _           ___ _         _   \n\
- / __| |_  _ __| |_ ___ _ _| __| |___  __| |__\n\
-| (__| | || (_-<  _/ -_) '_| _|| / _ \\/ _| / /\n\
- \\___|_|\\_,_/__/\\__\\___|_| |_| |_\\___/\\__|_\\_\\\n\
-  INSTALLER  v0.1.3                 by haxys\
-";
+const SPLASH = "CLUSTERFLOCK INSTALLER  v0.1.4  by haxys";
 const BASE_URL = "https://raw.githubusercontent.com/haxys-labs/clusterflock/main/";
 
 /** @param {import(".").NS } ns */
@@ -36,7 +30,7 @@ export async function main(ns) {
     async function install_clusterflock() {
         const manifest = await get_manifest();
         for (const filename of manifest) {
-            if (filename[0] != "#") { // The manifest can contain comments.
+            if (filename[0] != "#") {
                 await download(filename);
             }
         }
