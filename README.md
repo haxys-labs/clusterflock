@@ -28,6 +28,15 @@ Currently, `ClusterFlock` performs the following tasks:
 * Maintain a list of hackable systems in `/data/hackable_hosts.txt`.
 * Notify the player of nuked and newly-hackable systems.
 
+## Additional Tools
+
+While not part of the core `ClusterFlock` package (see: [MANIFEST.txt](https://github.com/haxys-labs/bitburner_scripts/blob/main/MANIFEST.txt)), the following tools have been included in this repository for their general utility:
+
+* `util/netscan.js` - A simple network scanner.
+* `util/scrape.js` - Scrapes useful information from discoverable hosts.
+
+These tools depend on `lib/meta.js`, which is installed along with `ClusterFlock` using the `install.js` file.
+
 ## "ClusterFlock?" ...Why?
 
 My original vision was orchestrating an automated flock of automated bots operating as an elite super-hacking cluster...thing. I couldn't settle on whether to call it a cluster of nodes or a flock of drones.
