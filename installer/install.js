@@ -12,7 +12,6 @@ export async function main(ns) {
     ns.tprintf(SPLASH);
     ns.tprintf("Installing ClusterFlock...");
     await install_clusterflock();
-    await ns.asleep(200);
     ns.tprintf("Installation complete! Launching...");
     ns.run("clusterflock.js");
 
@@ -31,15 +30,17 @@ export async function main(ns) {
     async function get_manifest() {
         await download("MANIFEST.txt");
         let manifest = ns.read("MANIFEST.txt").split("\n");
-        del("MANIFEST.txt");
         return manifest;
     }
 
     async function install_clusterflock() {
-        for (const filename of await get_manifest()) {
+        const manifest = await get_manifest();
+        for (const filename of manifest) {
             if (filename[0] != "#") { // The manifest can contain comments.
                 await download(filename);
             }
         }
+        del("MANIFEST.txt");
+        await ns.asleep(200);
     }
 }
