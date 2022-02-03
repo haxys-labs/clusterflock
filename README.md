@@ -30,7 +30,7 @@ Currently, `ClusterFlock` performs the following tasks:
 
 ## Additional Tools
 
-While not part of the core `ClusterFlock` package (see: [MANIFEST.txt](https://github.com/haxys-labs/bitburner_scripts/blob/main/MANIFEST.txt)), the following tools have been included in this repository for their general utility:
+While not part of the core `ClusterFlock` package (see: [MANIFEST.txt](https://github.com/haxys-labs/clusterflock/blob/main/MANIFEST.txt)), the following tools have been included in this repository for their general utility:
 
 * `util/netscan.js` - A simple network scanner.
 * `util/scrape.js` - Scrapes useful information from discoverable hosts.
